@@ -6,12 +6,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 public final class HelloWorldBot extends Bot {
     public static void main(String[] args){
-        if(args == null || args.length != 2){
-            System.out.println("You must run bot with 2 args - BotToken and bot UserName");
-        } else {
             ApiContextInitializer.init();
-            Bot.runBot(new HelloWorldBot(args[0], args[1]));
-        }
+            Bot.runBot(new HelloWorldBot("5203041861:AAEMUjYGzmfiD3RDxD8UONQKbDhrBFkpTqI", "KPI2LabBot"));
     }
 
     private HelloWorldBot(String token, String botName) {
